@@ -1,34 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 16:43:34 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/06 11:04:31 by iel-fagh         ###   ########.fr       */
+/*   Created: 2023/11/15 16:21:36 by iel-fagh          #+#    #+#             */
+/*   Updated: 2023/11/15 16:35:22 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+void ft_putchar_fd(char c, int fd)
 {
-    if (c >= 97 && c <= 122)
-        return (c - 32);
-    else 
-        return (c);
+    write(fd, &c, 1);
 }
-/*
-int main(void)
-{
-    printf("%c\n",ft_toupper('A'));
-    printf("%c\n",ft_toupper('a'));
-    printf("%c\n",ft_toupper('B'));
-    printf("%c\n",ft_toupper('b'));
-    printf("%c\n",ft_toupper(56));
-    printf("%c\n",ft_toupper(97));
-    printf("%c\n",ft_toupper('+'));
-    printf("%c\n",ft_toupper('b'));
+int main() {
+    ft_putchar_fd('A', 1); // Writes the character 'A' to the standard output (file descriptor 1)
+    return 0;
 }
-*/

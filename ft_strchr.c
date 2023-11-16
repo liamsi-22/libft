@@ -6,26 +6,26 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 18:09:35 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/03 16:39:21 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/10 21:14:47 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(char *s, int c)
+char *ft_strchr(const char *s, int c)
 {
-    while ((*s != c) && (*s != '\0'))
+    while ((*s != (char)c) && (*s != '\0'))
         s++;
-    if (*s)
-        return (s);
-    else 
+    if (*s == (char)c)
+        return ((char *)s);
+    else
         return (NULL);
 }
 /*
 int main()
 {
     char x[20] = "silmap";
-    char y = 's';
+    char y = '\0';
     printf("%s",ft_strchr(x,y));
     return 0;
 }

@@ -6,17 +6,13 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 18:45:38 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/01 18:49:32 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/09 14:00:53 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int ft_isascii(int c)
 {
     return (c >= 0 && c <= 127);
 }
-/*
-int main()
-{
-    return (0);
-}
-*/

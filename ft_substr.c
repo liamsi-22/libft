@@ -1,35 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 20:47:28 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/06 11:03:51 by iel-fagh         ###   ########.fr       */
+/*   Created: 2023/11/09 16:41:17 by iel-fagh          #+#    #+#             */
+/*   Updated: 2023/11/13 17:05:33 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
     size_t i;
+    char *sub;
     
     i = 0;
-    while (i < n) {
-        if (*(unsigned char *)(s + i) == (unsigned char)c)
+    // if (!s)
+    // return (0);
+    sub = (char *)malloc(len + 1);
+    if (sub == NULL)
+        return (NULL);
+    else
+    {
+        while (i < len && s[start])
         {
-            return (void *)(s + i);
+            sub[i] = s[start];
+            i++;
+            start++;
         }
-        i++;
+        sub[i] = '\0';
     }
-    return (NULL);
+
+    return (sub);
 }
-/*
-int main (int ac,char **av)
-{
-    (void)ac;
-    printf("%s",(char *)ft_memchr(av[1],av[2][0],5));
-}
-    */
+// int main()
+// {
+//     char const H[20] = "Hello World";
+//     printf("%s", ft_substr(H, 6, 3));
+// }

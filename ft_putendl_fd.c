@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 20:47:28 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/06 11:03:51 by iel-fagh         ###   ########.fr       */
+/*   Created: 2023/11/12 11:59:28 by iel-fagh          #+#    #+#             */
+/*   Updated: 2023/11/12 17:49:36 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void *ft_memchr(const void *s, int c, size_t n)
+#include <stdarg.h>
+#include
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    size_t i;
+    int len_s;
+    char *new_s;    
     
-    i = 0;
-    while (i < n) {
-        if (*(unsigned char *)(s + i) == (unsigned char)c)
-        {
-            return (void *)(s + i);
-        }
-        i++;
-    }
-    return (NULL);
+    len_s = ft_strlen(s);
+    new_s = (char *)malloc(len_s + 1);
+    if (new_s == NULL)
+        return (NULL);
 }
-/*
-int main (int ac,char **av)
-{
-    (void)ac;
-    printf("%s",(char *)ft_memchr(av[1],av[2][0],5));
-}
-    */
