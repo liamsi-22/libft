@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 16:21:36 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/15 16:35:22 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/16 13:59:27 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ void ft_putchar_fd(char c, int fd)
 {
     write(fd, &c, 1);
 }
+/*
 int main() {
     ft_putchar_fd('A', 1); // Writes the character 'A' to the standard output (file descriptor 1)
     return 0;
 }
+*/
