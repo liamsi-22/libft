@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:56:59 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/16 14:41:33 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/16 18:25:36 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,6 @@
 
 void ft_putstr_fd(char *s, int fd)
 {
-    int i;
-    
-    i = 0;
-    while (s[i])
-    {
-        ft_putchar_fd(s[i],fd);
-        i++;
-    }
+    if (s)
+        write(fd, s, ft_strlen(s));
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd..c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:56:56 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/16 14:51:37 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/16 18:17:20 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,27 @@ void ft_putnbr_fd(int n, int fd)
 {
     if (n == -2147483648)
     {
-        ft_putchar_fd('-',fd);
-        ft_putstr_fd("2147483648",fd);
-        return ;
+        ft_putchar_fd('-', fd);
+        ft_putstr_fd("2147483648", fd);
+        return;
     }
-    if (n < 0)
+    else
     {
-        ft_putchar_fd('-',fd);
-        n *= -1;
+        if (n < 0)
+        {
+            ft_putchar_fd('-', fd);
+            n *= -1;
+        }
+        if (n > 9)
+            ft_putnbr_fd((n / 10), fd);
+        ft_putchar_fd((n % 10) + '0', fd);
     }
-    if (n > 9)
-        ft_putnbr_fd((n / 10),fd);
-    ft_putchar_fd((n % 10) + '0',fd);
 }
+/*
+int main (void)
+{
+    int x = -40000;
+    ft_putnbr_fd(x,1);
+    return 0;
+}
+*/
