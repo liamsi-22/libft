@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 16:46:26 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/15 16:22:36 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:22:08 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ char *ft_substr(char const *s, unsigned int start, size_t len);
 char *ft_strjoin(char const *s1, char const *s2);
 char *ft_strtrim(char const *s1, char const *set);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
-void ft_striteri(char *s, void (*f)(unsigned int,char*))
-char *ft_itoa(int n)
+void ft_striteri(char *s, void (*f)(unsigned int,char*));
+char *ft_itoa(int n);
 #endif
