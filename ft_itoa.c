@@ -67,8 +67,10 @@ char *ft_itoa(int n)
     dup_fill(dup, i, x);
     return (dup);
 }
+/*
 int main()
 {
     long long i = -2147483648;
     printf("%s", ft_itoa(i));
 }
+*/
