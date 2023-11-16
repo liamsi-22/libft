@@ -6,13 +6,13 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:56:59 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/16 14:01:45 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:41:33 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-ft_putstr_fd(char *s, int fd)
+void ft_putstr_fd(char *s, int fd)
 {
     int i;
     
