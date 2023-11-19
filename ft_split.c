@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 20:23:59 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/19 13:44:45 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/19 14:03:39 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,10 @@ static size_t	word_length(const char *s, char c)
 	}
 	return (counter);
 }
-static int ft_Free(char **s)
+
+static int	ft_free(char **s)
 {	
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])
@@ -56,40 +57,41 @@ char	**ft_split(char const *s, char c)
 {
 	char	**new;
 	size_t	i;
-	size_t j;
-	
+	size_t	j;
+
 	if (!s)
 		return (NULL);
-	new = (char **)malloc((count_words(s,c) + 1) * sizeof(char *));
+	new = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!new)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (s[j] && i < count_words(s,c))
+	while (s[j] && i < count_words(s, c))
 	{
 		if (s[j] != c)
 		{
-			new[i] = ft_substr(s,j,word_length(s + j,c));
+			new[i] = ft_substr(s, j, word_length(s + j, c));
 			if (!new[i++])
 				ft_Free(new);
-			j += word_length(s + j,c);
+			j += word_length(s + j, c);
 		}
 		else
 			j++;
 	}
 	new[i] = NULL;
-	return	(new);
+	return (new);
 }
-
-// int main(void)
-// {
-//     char str[90] = "/////welcome";
-//     char **split = ft_split(str, '/');
-//     int i = 0;
-//     while (i < 2)
-//     {
-//         printf("%s", split[i]);
-//         printf("\n");
-//         i++;
-//     }
-// }
+/*
+int	main(void)
+{
+    char str[90] = "//////Hallo///World//hel;)llo//heheh///;)//h/e/l/l/o/ool/o";
+    char **split = ft_split(str, '/');
+    int i = 0;
+    while (i < 11)
+    {
+        printf("%s", split[i]);
+        printf("\n");
+        i++;
+    }
+}
+*/
