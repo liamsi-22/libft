@@ -6,18 +6,18 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 18:58:28 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/02 11:46:20 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/20 15:25:01 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strlen(const char *str)
+size_t	strlen(const char *s)
 {
-    int i;
-    
-    i = 0;
-    while(str[i])
-        i++;
-    return (i);
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

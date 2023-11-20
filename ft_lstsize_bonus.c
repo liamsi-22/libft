@@ -1,42 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 16:23:54 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/19 16:54:54 by iel-fagh         ###   ########.fr       */
+/*   Created: 2023/11/20 19:07:05 by iel-fagh          #+#    #+#             */
+/*   Updated: 2023/11/20 19:11:37 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int ft_lstsize(t_list *lst)
 {
-	int	s_len;
-
-	s_len = ft_strlen(s);
-	while (s_len >= 0)
-	{
-		if (s[s_len] == (char)c)
-			return ((char *)(s + s_len));
-		s_len--;
-	}
-	return (NULL);
-}
-/*
-int main(void)
-{
-    const char x[30] = "helllo ";
-    int y = '\0';
-    const char *result;
+    int counter;
+    t_list tmp;
     
-    result = ft_strrchr(x, y);
-    if (result != NULL)
-        printf("%s <--", result);
-    else 
-        printf("NULL");
-    return (0);
+    tmp = s_list;
+    counter = 0;
+    if (lst)
+    {
+        while (tmp)
+        {
+            tmp = tmp -> next;
+            counter++;
+        }
+    }
+    return (counter);
 }
-*/
