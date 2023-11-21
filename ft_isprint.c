@@ -6,13 +6,13 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 18:55:05 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/06 11:03:47 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/21 18:50:47 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    return (c >= 32 && c <= 126);
+	return (c >= 32 && c <= 126);
 }

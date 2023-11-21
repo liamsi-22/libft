@@ -6,13 +6,13 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 14:19:11 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/06 11:03:33 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/21 18:41:53 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
 	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }

@@ -6,18 +6,18 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:43:34 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/06 11:04:31 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/21 18:26:33 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if (c >= 97 && c <= 122)
-        return (c - 32);
-    else 
-        return (c);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	else
+		return (c);
 }
 /*
 int main(void)

@@ -6,20 +6,20 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 18:09:35 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/10 21:14:47 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/21 18:31:50 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    while ((*s != (char)c) && (*s != '\0'))
-        s++;
-    if (*s == (char)c)
-        return ((char *)s);
-    else
-        return (NULL);
+	while ((*s != (char)c) && (*s != '\0'))
+		s++;
+	if (*s == (char)c)
+		return ((char *)s);
+	else
+		return (NULL);
 }
 /*
 int main()

@@ -6,15 +6,15 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 19:29:46 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/21 16:25:22 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/21 18:16:21 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-    if (lst && del)
-    {
-        del(lst -> content);
-        free(lst);
-    }
+	if (lst && del)
+	{
+		del(lst -> content);
+		free(lst);
+	}
 }

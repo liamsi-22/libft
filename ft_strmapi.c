@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:49:24 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/19 21:53:46 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/21 18:25:32 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		len_s;
 	char	*new_s;
-	int	i;
+	int		i;
 
 	i = 0;
-       	if (!s || !f)
+	if (!s || !f)
 		return (NULL);
 	len_s = ft_strlen(s);
 	new_s = (char *)malloc(len_s + 1);
 	if (new_s == NULL)
 		return (NULL);
-	while(i != len_s)
+	while (i != len_s)
 	{
 		new_s[i] = f(i, s[i]);
 		i++;
