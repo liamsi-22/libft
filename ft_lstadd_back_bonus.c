@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 19:26:09 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/20 19:29:23 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/21 16:37:15 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,17 @@
 
 void ft_lstadd_back(t_list **lst, t_list *new)
 {
-    t_list tmp;
+    t_list *tmp;
 
+
+    if (!new || !lst)
+        return ;
     tmp = *lst;
-    if (new && lst)
+    if (*lst)
     {
-        while (tmp -> next != NULL)
-            tmp = tmp -> next;
+        tmp = ft_lstlast(*lst);
+        tmp -> next = new;
     }
-    tmp -> next = new;
+    else
+        *lst = new;
 }
