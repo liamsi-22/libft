@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 16:21:01 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/21 18:12:44 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/21 21:30:10 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst)
 	{
 		new_node = ft_lstnew(f(lst -> content));
-		if (!new)
+		if (new_node)
 		{
 			ft_lstclear(&lst, del);
 			return (NULL);

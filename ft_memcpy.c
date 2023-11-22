@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:03:57 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/19 16:47:05 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/22 19:34:08 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
+	if (!dest || !src)
+		return (NULL);
 	i = 0;
 	while (i < n)
 	{
@@ -28,7 +30,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 int main(int ac, char **av)
 {
     (void)ac;
-    printf("%s",(unsigned char *)ft_memcpy(av[1] + 2,av[1],5));
+    (void)**av;
+    printf("%s",(unsigned char *)ft_memcpy(NULL,NULL,5));
     return 0;
 }
 */

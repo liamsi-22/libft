@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:04:02 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/19 17:06:17 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/22 18:57:36 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
+	if (!dest || !src)
+		return (NULL);
 	if (src >= dest)
 	{
 		ft_memcpy(dest, src, n);

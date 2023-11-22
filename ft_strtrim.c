@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 19:05:16 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/19 17:14:16 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/22 19:26:13 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*dup;
 
 	start = 0;
-	if (!s1 || !set)
+	if (!s1 || !set || !*s1)
 		return (NULL);
 	while (s1[start] && ft_strchr(set, s1[start]) != NULL)
 		start++;

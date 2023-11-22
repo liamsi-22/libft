@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 10:16:01 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/20 19:17:08 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/22 19:19:06 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int			sign;
-	int			i;
-	long int	res;
+	int	sign;
+	int	i;
+	int	res;
 
 	if (!str)
 		return (0);
