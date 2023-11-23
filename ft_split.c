@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 20:23:59 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/21 18:21:26 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/23 15:04:50 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ char	**ft_split(char const *s, char c)
 		{
 			new[i] = ft_substr(s, j, word_length(s + j, c));
 			if (!new[i++])
-				return (ft_Free(new));
+				return (ft_free(new));
 			j += word_length(s + j, c);
 		}
 		else
