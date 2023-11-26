@@ -6,17 +6,19 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:03:57 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/22 19:34:08 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/25 19:27:17 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
+#include <stdlib.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
-	if (!dest || !src)
+	if (!dest && !src)
 		return (NULL);
 	i = 0;
 	while (i < n)
@@ -31,7 +33,8 @@ int main(int ac, char **av)
 {
     (void)ac;
     (void)**av;
-    printf("%s",(unsigned char *)ft_memcpy(NULL,NULL,5));
-    return 0;
-}
-*/
+   	char x[20] = "hello";	
+	printf("%s",(char *)ft_memcpy(((void *)0), ((void *)0), 3));
+    //printf("%s",(char *)memcpy(NULL, x, 3));
+	return 0;
+}*/

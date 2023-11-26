@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 10:16:01 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/22 19:19:06 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/25 20:27:45 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ int	ft_atoi(const char *str)
 	int	i;
 	int	res;
 
-	if (!str)
-		return (0);
 	i = 0;
 	sign = 1;
 	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))

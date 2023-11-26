@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:04:07 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/21 19:16:00 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/25 19:16:38 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return ((void *)s);
 }
-/*
-int main(int ac,char **av)
-{
-    (void)ac;
-    printf("%s",(unsigned char *)ft_memset(av[1],av[2][0],10));
-    return (0);
-}
-*/
