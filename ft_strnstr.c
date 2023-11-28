@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 18:09:17 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/22 19:16:57 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/28 21:33:33 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,23 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	size_t	little_len;
 
-	if (!little[0])
-		return ((char *)(big));
-	little_len = ft_strlen(little);
 	i = 0;
-	while ((i + little_len <= len) && big[i])
+	j = 0;
+	if (!little[i])
+		return ((char *)(big));
+	while (big[i] && i < len)
 	{
-		j = 0;
-		while (little[j] == big[i + j])
-			j++;
-		if (little[j] == '\0')
-			return ((char *)(big + i));
+		if (big[i] == little[j])
+		{
+			while (i + j < len && big[i + j] == little[j])
+			{
+				if (little[j + 1] == '\0')
+					return ((char *)(big + i));
+				j++;
+			}
+			j = 0;
+		}
 		i++;
 	}
 	return (NULL);

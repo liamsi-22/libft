@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 19:05:16 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/22 19:26:13 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/27 20:37:01 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,20 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
 	size_t	end;
-	size_t	new_len;
 	char	*dup;
 
-	start = 0;
-	if (!s1 || !set || !*s1)
+	if (!s1 || !set)
 		return (NULL);
+	start = 0;
 	while (s1[start] && ft_strchr(set, s1[start]) != NULL)
 		start++;
-	end = ft_strlen(s1) - 1;
+	end = ft_strlen(s1);
 	while (end > start && ft_strchr(set, s1[end]) != NULL)
 		end--;
-	new_len = (end - start) + 1;
-	dup = (char *)malloc(new_len + 1);
+	dup = (char *)malloc(end - start + 2);
 	if (dup == NULL)
 		return (NULL);
-	else
-	{
-		ft_memcpy(dup, s1 + start, new_len);
-		dup[new_len] = '\0';
-	}
+	ft_strlcpy(dup, s1 + start, end - start + 2);
 	return (dup);
 }
 /*
