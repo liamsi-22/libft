@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 21:36:37 by iel-fagh          #+#    #+#             */
-/*   Updated: 2023/11/30 21:05:31 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2023/11/30 22:17:43 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	sum;
 
 	sum = nmemb * size;
-	if (size && (nmemb < SIZE_MAX / size))
+	if (size && (nmemb > SIZE_MAX / size))
 		return (NULL);
 	mem = (void *)malloc(nmemb * size);
 	if (mem == NULL)
