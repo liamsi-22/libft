@@ -6,13 +6,17 @@
 #    By: adiaz-be <adiaz-be@student.42malaga.c      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 12:11:06 by adiaz-be          #+#    #+#              #
+<<<<<<< HEAD
 #    Updated: 2023/12/01 20:49:16 by iel-fagh         ###   ########.fr        #
+=======
+#    Updated: 2023/11/30 22:16:46 by iel-fagh         ###   ########.fr        #
+>>>>>>> 2f629c367d7aa5310c0a850dcd0525435da9032e
 #                                                                              #
 # **************************************************************************** #
 NAME := libft.a
 CC := cc
 CFLAGS := -Wall -Wextra -Werror
-AR := ar rcs
+AR := ar rc
 RM := rm -rf
 CFILES := ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
     ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c \
