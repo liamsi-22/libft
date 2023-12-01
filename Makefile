@@ -6,7 +6,7 @@
 #    By: adiaz-be <adiaz-be@student.42malaga.c      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 12:11:06 by adiaz-be          #+#    #+#              #
-#    Updated: 2023/11/28 19:16:39 by iel-fagh         ###   ########.fr        #
+#    Updated: 2023/12/01 20:49:16 by iel-fagh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME := libft.a
@@ -49,7 +49,7 @@ fclean: clean
 
 re: fclean all
 
-bonus: $(OBJS) $(OBJSB)
-	$(AR) $(NAME) $(OBJS) $(OBJSB)
+bonus: $(OBJSB)
+	$(AR) $(NAME) $(OBJSB)
 
 .PHONY: all clean fclean re bonus
