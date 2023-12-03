@@ -6,7 +6,7 @@
 #    By: iel-fagh <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/01 21:08:37 by iel-fagh          #+#    #+#              #
-#    Updated: 2023/12/01 21:08:42 by iel-fagh         ###   ########.fr        #
+#    Updated: 2023/12/03 11:08:44 by iel-fagh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME := libft.a
@@ -30,16 +30,16 @@ CFILESB := ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
     ft_lstclear_bonus.c ft_lstiter_bonus.c \
     ft_lstmap_bonus.c
 
-OBJS := ${CFILES:%.c=%.o}
+OBJS := ${CFILES:.c=%.o}
 OBJSB := ${CFILESB:%.c=%.o}
 
 $(NAME): $(OBJS)
 	$(AR) $@ $^
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $^ -o $@
-
 all: $(NAME)
+
+bonus: $(OBJSB)
+	$(AR) $(NAME) $(OBJSB)
 
 clean:
 	$(RM) $(OBJS) $(OBJSB)
@@ -48,8 +48,5 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
-
-bonus: $(OBJSB)
-	$(AR) $(NAME) $(OBJSB)
 
 .PHONY: all clean fclean re bonus
