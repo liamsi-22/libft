@@ -6,7 +6,7 @@
 #    By: iel-fagh <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/01 21:08:37 by iel-fagh          #+#    #+#              #
-#    Updated: 2023/12/03 14:27:46 by iel-fagh         ###   ########.fr        #
+#    Updated: 2023/12/03 15:06:13 by iel-fagh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME := libft.a
@@ -42,7 +42,7 @@ bonus: $(OBJSB)
 
 %.o:%.c
 	$(CC) $(CFLAGS) -c $^
-	$(AR) $(NAME) $^
+	$(AR) $(NAME) $@
 
 clean:
 	$(RM) $(OBJS) $(OBJSB)
